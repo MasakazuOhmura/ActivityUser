@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     TextView answerView;
     RadioGroup requestGroup;
 
+    private static final String INTENT_KEY = "MY_KEY";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
         answerView = (TextView) findViewById(R.id.answer_view);
         requestGroup = (RadioGroup) findViewById(R.id.request_group);
         requestGroup.check(R.id.request_1);
+    }
+
+    public void onClickStartButton2(View view) {
+        Intent intent = new Intent();
+        intent.setAction("my_activity_provider");
+        intent.putExtra(INTENT_KEY, "success!!!");
+        startActivity(intent);
     }
 
     public void onClickStartButton(View view) {

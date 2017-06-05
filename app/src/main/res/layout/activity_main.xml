@@ -17,8 +17,7 @@
     <RadioGroup
         android:id="@+id/request_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/request_1"
@@ -47,6 +46,13 @@
         android:layout_height="wrap_content"
         android:onClick="onClickStartButton"
         android:text="@string/start_button_label"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickStartButton2"
+        android:text="@string/start_button_label2"
         android:textSize="@dimen/button_text_size" />
 
 </LinearLayout>
